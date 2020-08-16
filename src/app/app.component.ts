@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ServicioService } from './servicio.service';
 import { Post } from './models/Post.model';
+import { async } from 'rxjs/internal/scheduler/async';
 
 @Component({
   selector: 'app-root',
@@ -11,25 +12,12 @@ export class AppComponent {
 
   posts: Post[];
 
+
   constructor(private servicioService: ServicioService) {
 
-
-    // onFiltro(){
-    //   this.posts = this.servicioService.getPostsByCategoria();
-
-
-    //   try {
-    //     this.posts = await this.servicioService.getPostsByCategoria($event);
-    //     console.log(this.posts);
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
 
 
 
   }
-
 }
-
 

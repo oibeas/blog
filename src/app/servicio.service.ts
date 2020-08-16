@@ -8,7 +8,6 @@ export class ServicioService {
 
 
   arrPost: Post[];
-  nuevoArrPost: Post[];
 
   constructor() {
 
@@ -43,13 +42,14 @@ export class ServicioService {
   // }
 
 
-  // getPostsByCategoria(cat): Promise<Post[]> {
-  //   return new Promise((resolve, reject) => {
-  //     resolve(this.arrPost.filter(post => {
-  //       return post.categoria === cat;
-  //     }));
-  //   });
-  // }
+  getPostsByCategoria(pCategoria): Promise<Post[]> {
+    return new Promise((resolve, reject) => {
+      resolve(this.arrPost.filter(post => {
+        return post.categoria === pCategoria;
+      }));
+    });
+  }
+
 
 
   // // Filtro por pais
