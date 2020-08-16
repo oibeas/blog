@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ServicioService } from './servicio.service';
+import { Post } from './models/Post.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'blog';
+
+  posts: Post[];
+
+  constructor(private servicioService: ServicioService) {
+
+
+    // onFiltro(){
+    //   this.posts = this.servicioService.getPostsByCategoria();
+
+
+    //   try {
+    //     this.posts = await this.servicioService.getPostsByCategoria($event);
+    //     console.log(this.posts);
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // }
+
+
+
+  }
+
 }
+
+

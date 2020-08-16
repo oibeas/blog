@@ -17,10 +17,8 @@ export class BlogComponent implements OnInit {
     try {
       this.posts = await this.servicioService.getAllPost();
       console.log(this.posts);
-
     } catch (error) {
       console.log(error);
-
     }
   }
 

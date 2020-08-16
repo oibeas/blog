@@ -2,29 +2,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <img src="https://www.freelogoservices.com/api/main/images/1j+ojFVDOMkX9Wytexe43D6kifKDrx5GmRrNwXs1M3EMoAJtlSkqhvJt9vw..."
             alt="">
-
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">New</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categorias
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Categoria 1</a>
-                        <a class="dropdown-item" href="#">Categoria 2</a>
-                        <a class="dropdown-item" href="#">Categoria 3</a>
-                    </div>
+                    <a class="nav-link" href="new">New</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <select class="btn btn-light btn-sm dropdown-toggle" id="categorias">
+                        <option hidden selected>Categoria</option>
+                        <option value="objetivos">Objetivos</option>
+                        <option value="consejos">Consejos</option>
+                        <option value="modelso">Modelos</option>
+                        <option value="accesorios">Accesorios</option>
+                        <option value="retratos">Retratos</option>
+                    </select>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -33,6 +27,10 @@
             </form>
         </div>
     </nav>
+
+
+
+
 
 
     <div class="row">

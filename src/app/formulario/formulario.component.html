@@ -1,1 +1,30 @@
-<p>formulario works!</p>
+<form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
+    <div class="form-group">
+        <label>Titulo</label>
+        <input type="text" name="titulo" class="form-control" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Texto</label>
+        <textarea type="text" name="texto" class="form-control" rows="3" ngModel></textarea>
+    </div>
+    <div class="form-group">
+        <input type="text" name="autor" class="form-control" placeholder="Autor" ngModel>
+    </div>
+    <div class="form-group">
+        <input type="text" name="imagen" class="form-control" placeholder="Imagen" ngModel>
+    </div>
+    <div class="form-group">
+        <input type="text" name="fecha" class="form-control" placeholder="Fecha" ngModel>
+    </div>
+    <div class="form-group">
+        <select type="text" name="categoria" class="form-control" ngModel>
+            <option value="" hidden selected>Categoria</option>
+            <option value="objetivos">Objetivos</option>
+            <option value="consejos">Consejos</option>
+            <option value="modelos">Modelos</option>
+            <option value="accesorios">Accesorios</option>
+            <option value="retratos">Retratos</option>
+        </select>
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-primary btn-block">
+</form>
