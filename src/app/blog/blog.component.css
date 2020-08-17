@@ -11,3 +11,9 @@ img:hover {
     /* don't forget to set a duration! */
     animation-iteration-count: infinite;
 }
+
+.categoria img {
+    width: 50px;
+    height: auto;
+    justify-content: right;
+}

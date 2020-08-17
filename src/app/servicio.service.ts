@@ -36,11 +36,6 @@ export class ServicioService {
     });
   }
 
-  // agregarPost(pPost) {
-  //   console.log(this.arrPost);
-  //   return this.arrPost.push(pPost);
-  // }
-
 
   getPostsByCategoria(pCategoria): Promise<Post[]> {
     return new Promise((resolve, reject) => {
@@ -49,24 +44,5 @@ export class ServicioService {
       }));
     });
   }
-
-
-
-  // // Filtro por pais
-  // getByPais(pPais): Promise<Escritor[]> {
-  //   return new Promise((resolve, reject) => {
-  //     resolve(ESCRITORES.filter(escritor => {
-  //       return escritor.pais === pPais;
-  //     }));
-  //   });
-  // }
-
-  // add(pEscritor): Promise<Escritor[]> {//Aqui hacemos un push en la base de datos de escritores.db
-  //   return new Promise((resolve, reject) => {
-  //     pEscritor.id = ESCRITORES.length + 1;
-  //     ESCRITORES.push(pEscritor);
-  //     resolve(ESCRITORES);
-  //   });
-  // }
 
 }

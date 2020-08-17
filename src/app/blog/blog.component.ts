@@ -25,13 +25,13 @@ export class BlogComponent implements OnInit {
     }
   }
 
-  async onFiltro(value) {
+  async onFiltro($event) {
     try {
-      if (value === "todos") {
+      if ($event.target.value === "todos") {
         this.posts = await this.servicioService.getAllPost();
       } else {
-        this.posts = await this.servicioService.getPostsByCategoria(value);
-        console.log(value);
+        this.posts = await this.servicioService.getPostsByCategoria($event.target.value);
+        console.log(this.posts);
       }
     } catch (error) {
       console.log(error);
