@@ -13,16 +13,32 @@ export class BlogComponent implements OnInit {
   posts: Post[];
   value: string;
   valor: string;
+  indice: number;
+  getNoticia: string;
 
-  constructor(private servicioService: ServicioService) { }
+  constructor(private servicioService: ServicioService) {
+
+    this.indice = 0;
+    this.getNoticia = 'noticia0';
+  }
 
   async ngOnInit() {
     try {
+
+      while (this.servicioService.get(this.getNoticia) != null) {
+        const not = this.servicioService.get(this.getNoticia);
+        this.servicioService.agregarPost(not);
+        this.indice++;
+        this.getNoticia = 'noticia' + this.indice;
+      }
+
+
       this.posts = await this.servicioService.getAllPost();
       console.log(this.posts);
     } catch (error) {
       console.log(error);
     }
+
   }
 
   async onFiltro($event) {

@@ -8,6 +8,7 @@ export class ServicioService {
 
 
   arrPost: Post[];
+  noticia: Post;
 
   constructor() {
 
@@ -18,6 +19,8 @@ export class ServicioService {
       new Post('Accesorios', 'Cuando hablo de recursos no me refiero a los del equipo o a los que encuentras por la web, sino a los propios recursos, a que seas una persona resolutiva, que si te has olvidado un difusor en casa, seas capaz de solventarlo; si la meteorología te falla, puedas darle la vuelta a la tortilla y sacar lo mejor del día; o si el monumento que ibas a fotografiar está cerrado al público seas capaz de encontrar cómo llevarte un pedacito a casa.', 'oibeas', 'https://bachimport.files.wordpress.com/2019/06/fomex.jpg', '04/08/2020', 'accesorios'),
       new Post('Retratos', 'No puede existir un artista sin creatividad ni imaginación. Estas dos cualidades van de la mano de la palabra artista. La creatividad es lo que te impulsa a crear constantemente, con una cámara de fotos, una guitarra o un pincel y un bote de pintura. Si no eres una persona creativa o que se esfuerza por serlo, difícilmente podrás llegar a considerarte un artista ni en fotografía ni en ninguna otra disciplina artística.', 'oibeas', 'https://d500.epimg.net/cincodias/imagenes/2019/05/28/lifestyle/1559073183_258744_1559073333_noticia_normal.jpg', '09/08/2020', 'retratos'),
     ]
+
+
 
   }
 
@@ -44,5 +47,24 @@ export class ServicioService {
       }));
     });
   }
+
+  //localStorage
+  set(key: string, data: any) {
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  get(key: string) {
+    try {
+      return JSON.parse(localStorage.getItem(key));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
 
 }
